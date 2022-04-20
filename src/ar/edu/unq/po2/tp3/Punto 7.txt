@@ -1,0 +1,10 @@
+1. ¿Cómo están organizadas en el sistema de archivos?
+
+2. ¿Encuentra alguna relación entre el nombre del paquete y la ubicación de los archivos fuentes de las
+clases (.java) y los archivos compilados (.class)?
+
+
+1) Los paquetes y sus clases estan organizado en el sistema de archivos por carpetas, una dentro de la otra.
+
+2) Los archivos fuentes y los compilados, se encuentran en carpetas que corresponden a los paquetes definidos en
+java, la unica diferencia es que los compilados estan como carpeta raiz es "bin".
