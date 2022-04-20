@@ -1,19 +1,27 @@
 package ar.edu.unq.po2.tp3;
 
-public class Punto {
+public class Point {
 	
-	private float x;
-	private float y;
-	public Punto(float x, float y) {
+	private float x,y;
+	
+	public Point(float x, float y) {
 		super();
 		this.setXY(x, y);
+	}
+	
+	public Point() {
+		this(0,0);
+	}
+	
+	public Point sumar(Point puntoASumar) {
+		return new Point(this.getX() + puntoASumar.getX(), this.getY() + puntoASumar.getY());
 	}
 	
 	public void setXY(float x, float y) {
 		this.setX(x);
 		this.setY(y);
 	}
-	
+
 	public float getX() {
 		return x;
 	}
