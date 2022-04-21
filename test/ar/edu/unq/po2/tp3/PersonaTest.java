@@ -1,48 +1,51 @@
 package ar.edu.unq.po2.tp3;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class PersonaTest {
-
-	@Test
-	public void edadPersona () throws ParseException {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String stringFecha = "06/10/1999";
-		Date fecha = sdf.parse(stringFecha);
-		
-		Persona persona = new Persona();
-				persona.setNombre("Micael");
-				persona.setFechaDeNacimiento(fecha);
-		
-				assertEquals(22, persona.getEdad());		
-	}
 	
-	@Test
-	public void esMenorQue () throws ParseException {
+	private Persona yo;
+	private Persona persona2;
+	
+	@Before
+	public void setUp() throws ParseException { //SetUp
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String stringFecha = "06/10/1999";
-		Date fecha = sdf.parse(stringFecha);
+		String stringFecha1 = "06/10/1999";
+		Date fecha1 = sdf.parse(stringFecha1);
 		
 		String stringFecha2 = "06/10/1989";
 		Date fecha2 = sdf.parse(stringFecha2);
 		
-		Persona persona1 = new Persona();
-				persona1.setNombre("Micael");
-				persona1.setFechaDeNacimiento(fecha);
+		yo = new Persona("Micael", fecha1);
+		persona2 = new Persona("Vanina", fecha2);
+	}
+	
+	@Test
+	public void crearUnaPersona () {
+		assertEquals("Micael", yo.getNombre());
+		assertEquals(fecha1, yo.getFechaDeNacimiento());
+	}
+
+	@Test
+	public void edadPersona () throws ParseException {
 		
-		Persona persona2 = new Persona();
-				persona2.setNombre("Vanina");
-				persona2.setFechaDeNacimiento(fecha2);
+		assertEquals(22, yo.getEdad());
+	}
+	
+	// Solo Persona conoce como calcular su edad, cualquier otro objeto solo obtiene y le importa su valor.
+	// El mecanismo que que permite esto se denomina "Encapsulamiento".
+	
+	@Test
+	public void esMenorQue () throws ParseException {
 				
-	 assertTrue(persona1.menorQue(persona2));
-}
-
-// Solo Persona conoce como calcular su edad, cualquier otro objeto solo obtiene y le importa su valor.
-// El mecanismo que que permite esto se denomina "Encapsulamiento".
-
-			
+		assertTrue(yo.menorQue(persona2));
+	}
 }
