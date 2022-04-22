@@ -8,6 +8,7 @@ import java.util.Date;
 public class Persona {
 	
 	private String nombre;
+	private String apellido;
 	private Date fechaDeNacimiento;
 	
 	public String getNombre() {
@@ -26,13 +27,13 @@ public class Persona {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
 	
-	public long getEdad() {
+	public int getEdad() {
 		 LocalDate hoy = LocalDate.now();   
 		 LocalDate nacimiento = this.getFechaDeNacimiento().toInstant().
 		           atZone(ZoneId.systemDefault()).toLocalDate(); 
-		 long edad = ChronoUnit.YEARS.between(nacimiento, hoy);
+		 Long edad = ChronoUnit.YEARS.between(nacimiento, hoy);
 		 
-	return edad;
+	return Integer.valueOf(edad.toString());
 	}
 	
 	public boolean menorQue (Persona persona) {
@@ -43,5 +44,13 @@ public class Persona {
 		super();
 		this.setNombre(nombre);
 		this.setFechaDeNacimiento(fechaDeNacimiento);
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 }
