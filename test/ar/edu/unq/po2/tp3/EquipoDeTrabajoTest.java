@@ -67,7 +67,7 @@ public class EquipoDeTrabajoTest {
 		equipoDeTrabajo.setNombre("My Group");
 		equipoDeTrabajo.setIntegrantes(listaDeIntegrantes);
 		assertEquals("My Group", equipoDeTrabajo.getNombre());
-		assertEquals(31, equipoDeTrabajo.getPromedioDeEdades(), 0);
+		assertEquals(31, equipoDeTrabajo.getPromedioDeEdades());
 		System.out.println("El promedio de edad del Equipo " + equipoDeTrabajo.getNombre() + " es " + equipoDeTrabajo.getPromedioDeEdades());
 	}
 }
