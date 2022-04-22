@@ -36,7 +36,7 @@ public class PersonaTest {
 	}
 
 	@Test
-	public void edadPersona () throws ParseException {
+	public void edadPersona() {
 		
 		assertEquals(22, yo.getEdad());
 	}
@@ -45,7 +45,7 @@ public class PersonaTest {
 	// El mecanismo que que permite esto se denomina "Encapsulamiento".
 	
 	@Test
-	public void esMenorQue () throws ParseException {
+	public void esMenorQue() {
 				
 		assertTrue(yo.menorQue(persona2));
 	}
