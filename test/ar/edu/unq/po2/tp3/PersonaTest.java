@@ -29,9 +29,10 @@ public class PersonaTest {
 	}
 	
 	@Test
-	public void crearUnaPersona () {
+	public void crearUnaPersona () throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		assertEquals("Micael", yo.getNombre());
-		assertEquals(fecha1, yo.getFechaDeNacimiento());
+		assertEquals("06/10/1999", sdf.format(yo.getFechaDeNacimiento()));
 	}
 
 	@Test
