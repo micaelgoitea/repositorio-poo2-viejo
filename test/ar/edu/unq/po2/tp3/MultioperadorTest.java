@@ -1,10 +1,10 @@
 package ar.edu.unq.po2.tp3;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class MultioperadorTest {
 

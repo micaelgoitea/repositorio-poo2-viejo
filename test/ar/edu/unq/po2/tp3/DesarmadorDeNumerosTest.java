@@ -1,8 +1,8 @@
 package ar.edu.unq.po2.tp3;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DesarmadorDeNumerosTest {
 
@@ -15,6 +15,7 @@ public class DesarmadorDeNumerosTest {
         // I check the amount is the expected one
         assertEquals(2, counter.getEvenOcurrences());
     }
+    
     @Test
     public void testMayorNumeroConDigitoPar() {
     
