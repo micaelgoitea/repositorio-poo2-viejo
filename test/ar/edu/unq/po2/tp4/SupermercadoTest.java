@@ -1,9 +1,9 @@
-package supermercado;
+package ar.edu.unq.po2.tp4;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class SupermercadoTest {
 	
@@ -16,7 +16,6 @@ public class SupermercadoTest {
 		arroz = new Producto("Arroz", 18.9d, true);
 		detergente = new Producto("Detergente", 75d);
 		supermercado = new Supermercado("Lo de Tito", "Av Zubeldia 801");
-		
 	}
 	
 	@Test
