@@ -26,6 +26,7 @@ public class SupermercadoTest {
 		assertEquals(2, supermercado.getCantidadDeProductos());
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testPrecioTotal() {
 		assertEquals(new Double(0), supermercado.getPrecioTotal());
