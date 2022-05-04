@@ -38,4 +38,5 @@ public class Trabajador {
 	public void setIngresosPercibidosDelAño(List<IngresoPercibido> ingresosPercibidosDelAño) {
 		this.ingresosPercibidosDelAño = ingresosPercibidosDelAño;
 	}
+	
 }
