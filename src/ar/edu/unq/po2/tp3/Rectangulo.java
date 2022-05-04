@@ -1,7 +1,5 @@
 package ar.edu.unq.po2.tp3;
 
-import java.awt.Rectangle;
-
 public class Rectangulo {
 	
 	private Point esquinaSuperiorIzquierda;
