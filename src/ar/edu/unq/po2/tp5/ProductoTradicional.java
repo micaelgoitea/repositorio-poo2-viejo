@@ -1,6 +1,6 @@
 package ar.edu.unq.po2.tp5;
 
-public class ProductoTradicional {
+public class ProductoTradicional implements Facturable {
 	
 	private String nombre;
 	private double precio;
@@ -44,12 +44,19 @@ public class ProductoTradicional {
 		IVAAplicar = iVAAplicar;
 	}
 
-	public Double getPrecioTotal() {
+	public double getPrecioTotal() {
 	
 		return this.getPrecio() + (this.getIVAAplicar() / 100 * this.getPrecio());
 	}
 
 	public void disminuirStock() {
 		this.stock--;
+	}
+
+	@Override
+	// En el caso de un producto al procesar el pago se le disminuye el stock, pero en el caso
+	// pero en el caso de una factura de lo registra en la agencia correspondiente.
+	public void registrarElPago() {
+		this.disminuirStock();	
 	}
 }
